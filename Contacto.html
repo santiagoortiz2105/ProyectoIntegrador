@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - SuperaGym</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>SuperaGym</h1>
+    <nav class="menu">
+      <a href="index.html">
+        <img src="img/casa.png" alt="Inicio"><br>
+        Inicio
+      </a>
+      <a href="planes.html">
+        <img src="img/lista-de-verificacion.png" alt="Planes"><br>
+        Planes
+      </a>
+      <a href="contacto.html">
+        <img src="img/libreta-de-contactos.png" alt="Contacto"><br>
+        Contacto
+      </a>
+    </nav>
+  </header>
+
+  <main class="contacto">
+    <section class="intro">
+      <h2>¡Hablemos!</h2>
+      <p>Completá el formulario y nuestro equipo te responderá lo antes posible.</p>
+    </section>
+
+    <section class="form-container">
+      <form id="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" maxlength="30" required placeholder="Tu nombre">
+        </div>
+
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" required pattern="^[\\w.-]+@[\\w.-]+\\.\\w{2,}$" placeholder="tucorreo@ejemplo.com">
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" required pattern="^\\d{10}$" placeholder="Ej: 1122334455">
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" rows="4" maxlength="200" placeholder="Escribí tu consulta..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+      </form>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperaGym</p>
+  </footer>
+</body>
+</html>
+
