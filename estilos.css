@@ -1,0 +1,456 @@
+/* ===== ESTILO GENERAL ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #ff6600;
+}
+
+/* ===== CARRUSEL ===== */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  gap: 10px;
+}
+
+.carousel img {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carousel button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel button:hover {
+  background-color: #cc5200;
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+.info {
+  text-align: center;
+  padding: 20px;
+}
+
+.info h2 {
+  color: #ff6600;
+}
+
+.boton {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background-color: #cc5200;
+}
+
+/* ===== PLANES ===== */
+.planes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 15px;
+}
+
+.columna {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: center;
+}
+
+.columna h3 {
+  color: #ff6600;
+}
+
+/* ===== VOLVER ===== */
+.volver {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.volver a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.volver a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.contacto {
+  padding: 80px 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro h2 {
+  font-size: 2em;
+  color: #ff6600;
+}
+
+.intro p {
+  color: #444;
+  font-size: 1.1em;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 350px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  transition: 0.2s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255,102,0,0.5);
+}
+
+.btn-enviar {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn-enviar:hover {
+  background-color: #cc5200;
+}
+
+#resultado {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+/* ===== SECCIÓN MOTIVACIONAL ===== */
+.motivacion {
+  background-color: #fff;
+  padding: 60px 80px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+.motivacion h2 {
+  text-align: center;
+  color: #ff6600;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.motivacion p {
+  color: #333;
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.motivacion .bloque {
+  margin-top: 30px;
+}
+
+.motivacion h3 {
+  color: #111;
+  border-left: 4px solid #ff6600;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.motivacion ul, 
+.motivacion ol {
+  margin-left: 40px;
+  color: #444;
+}
+
+.motivacion li {
+  margin-bottom: 8px;
+}
+
+.frase-final {
+  margin-top: 40px;
+  font-style: italic;
+  text-align: center;
+  color: #ff6600;
+  font-size: 1.2em;
+}
+
+.filosofia {
+  background-color: #ff6600;
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.filosofia h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* ===== SECCIÓN PLANES ===== */
+.planes {
+  background-color: #fff;
+  padding: 60px 80px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+.planes h2 {
+  text-align: center;
+  color: #ff6600;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.planes p {
+  color: #333;
+  font-size: 1.1em;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.planes ul {
+  margin-left: 40px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.planes li {
+  margin-bottom: 8px;
+}
+
+.planes-bloque {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-left: 5px solid #ff6600;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.planes-bloque h3 {
+  color: #ff6600;
+  margin-top: 0;
+}
+
+.planes .frase-final {
+  text-align: center;
+  font-style: italic;
+  color: #ff6600;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+/* ===== PLANES ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #444;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.btn-ver {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-ver:hover {
+  background-color: #cc5200;
+}
+/* ===== DETALLES DE PLAN ===== */
+.detalle-plan {
+  background-color: #fff;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  line-height: 1.7;
+}
+
+.detalle-plan h2 {
+  text-align: center;
+  color: #ff6600;
+  margin-bottom: 30px;
+}
+
+.detalle-plan h3 {
+  color: #ff6600;
+  margin-top: 30px;
+}
+
+.detalle-plan ul {
+  margin-left: 40px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.detalle-plan li {
+  margin-bottom: 8px;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  background-color: #111;
+  padding: 15px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.menu a img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu a:hover {
+  color: orange;
+}
+
+.menu a:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8));
+}
