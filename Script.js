@@ -19,35 +19,64 @@ if (img) {
 }
 
 // ----- Validación formulario -----
-const form = document.getElementById("formulario");
+var form = document.getElementById("formulario");
+var resultado = document.getElementById("resultado");
+
 if (form) {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const resultado = document.getElementById("resultado");
-
     resultado.innerHTML = "";
-    let errores = [];
 
-    if (nombre.length === 0) errores.push("El nombre es obligatorio.");
-    if (!/^[\w.-]+@[\w.-]+\.\w{2,}$/.test(email)) errores.push("Email inválido.");
-    if (!/^\d{10}$/.test(telefono)) errores.push("El teléfono debe tener 10 números.");
+    var nombre = document.getElementById("nombre").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var telefono = document.getElementById("telefono").value.trim();
+    var mensaje = document.getElementById("mensaje").value.trim();
 
+    var errores = [];
+
+    // Validaciones
+    if (nombre.length === 0) {
+      errores.push("El nombre es obligatorio.");
+    }
+    if (nombre.length > 30) {
+      errores.push("El nombre no debe superar los 30 caracteres.");
+    }
+
+    var emailRegex = /^[\w.-]+@[\w.-]+\.\w{2,}$/;
+    if (!emailRegex.test(email)) {
+      errores.push("El email no es válido.");
+    }
+
+    var telRegex = /^[0-9\s-]{7,15}$/;
+    if (!telRegex.test(telefono)) {
+      errores.push("El teléfono debe tener entre 7 y 15 dígitos.");
+    }
+
+    if (mensaje.length > 200) {
+      errores.push("El mensaje no debe superar los 200 caracteres.");
+    }
+
+    // Mostrar errores o aciertos
     if (errores.length > 0) {
-      resultado.style.color = "red";
-      resultado.innerHTML = errores.join("<br>");
+      var textoErrores = "";
+      for (var i = 0; i < errores.length; i++) {
+        textoErrores += "<div>" + errores[i] + "</div>";
+      }
+      resultado.innerHTML = textoErrores;
+      resultado.classList.remove("ok");
     } else {
-      resultado.style.color = "green";
       resultado.innerHTML = "";
-      const div = document.createElement("div");
-      div.innerHTML = `<h3>Datos enviados:</h3>
-        <p>Nombre: ${nombre}</p>
-        <p>Email: ${email}</p>
-        <p>Teléfono: ${telefono}</p>`;
+      var div = document.createElement("div");
+      div.className = "ok";
+      div.innerHTML =
+        "<h3>Datos enviados correctamente</h3>" +
+        "<p><strong>Nombre:</strong> " + nombre + "</p>" +
+        "<p><strong>Email:</strong> " + email + "</p>" +
+        "<p><strong>Teléfono:</strong> " + telefono + "</p>" +
+        "<p><strong>Mensaje:</strong> " + (mensaje !== "" ? mensaje : "(sin mensaje)") + "</p>";
       resultado.appendChild(div);
       form.reset();
     }
   });
 }
+
