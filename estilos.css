@@ -436,3 +436,26 @@ footer {
   transform: scale(1.15);
   filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8));
 }
+
+/*====Novalidate====*/
+#resultado {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+#resultado div {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff3b3b;
+  color: #ffb3b3;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin: 0.3rem auto;
+  width: fit-content;
+}
+
+#resultado .ok {
+  background: rgba(0, 255, 120, 0.1);
+  border-color: #00ff80;
+  color: #b8ffd9;
+}
