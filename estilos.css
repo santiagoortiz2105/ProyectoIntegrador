@@ -445,9 +445,9 @@ footer {
 }
 
 #resultado div {
-  background: rgba(255, 0, 0, 0.1);
+  background: rgba(243, 180, 180, 0.1);
   border: 1px solid #ff3b3b;
-  color: #ffb3b3;
+  color: #f50606;
   padding: 0.5rem;
   border-radius: 6px;
   margin: 0.3rem auto;
@@ -455,7 +455,7 @@ footer {
 }
 
 #resultado .ok {
-  background: rgba(0, 255, 120, 0.1);
-  border-color: #00ff80;
-  color: #b8ffd9;
+  background: rgba(252, 252, 252, 0.1);
+  border-color: #ff5e00;
+  color: #f55d04;
 }
